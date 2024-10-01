@@ -13,6 +13,7 @@ public class PokeapiApplication implements CommandLineRunner {
 	private PokemonService pokemonService;
 
 	public PokeapiApplication(@Autowired PokemonService pokemonService) {
+		this.pokemonService = pokemonService;
 	}
 
 	public static void main(String[] args) {

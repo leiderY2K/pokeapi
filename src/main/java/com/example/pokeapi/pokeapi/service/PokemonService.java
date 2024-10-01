@@ -29,14 +29,14 @@ public class PokemonService {
         StringBuilder str = new StringBuilder();
         str.append(api);
         logger.info(api);
-        str.append("&n" + nombre);
+        str.append(nombre);
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(str.toString())).build();
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             logger.info(response.body());
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
+            
         }
-
     }
 }
