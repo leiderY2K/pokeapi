@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<title>Error</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container error-container">
+        <h1 class="display-4" th:text="'Error ' + ${status}"></h1>
+        <p class="lead" th:text="${message}"></p>
+        <a href="/" class="btn btn-primary">Volver al Inicio</a>
+    </div>
+</body>
+
+<style>
+body {
+	background-color: #f8f9fa; /* Color de fondo */
+}
+
+.error-container {
+	margin-top: 100px; /* Espacio superior */
+	text-align: center; /* Centrar texto */
+}
+</style>
+
+</html>

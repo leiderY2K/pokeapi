@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "pokeapi.base_url",
+  "type": "java.lang.String",
+  "description": "La url base de PokeAPI"
+}]}

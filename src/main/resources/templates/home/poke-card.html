@@ -1,0 +1,36 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+	<div id="pokemon-details" class="pokemon-card">
+		<h2 class="text-capitalize" th:text="${pokemon.name}">Nombre del Pokémon</h2>
+		<img class="pokemon-image" th:src="${pokemon.img}" alt="Imagen de Pokémon" />
+		<div>
+			<p>
+				<strong>ID:</strong> <span th:text="${pokemon.id}"></span>
+			</p>
+			<p>
+				<strong>Altura:</strong> <span th:text="${pokemon.height}">0</span> <span>decímetros</span>
+			</p>
+			<p>
+				<strong>Peso:</strong> <span th:text="${pokemon.weight}">0</span> <span>hectogramos</span>
+			</p>
+		</div>
+	</div>
+</body>
+
+<style>
+.pokemon-card {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 16px;
+	text-align: center;
+	margin: 16px;
+}
+
+.pokemon-image {
+	width: 355px;
+	height: 355px;
+	object-fit: contain;
+	/* Asegura que la imagen se ajuste al contenedor */
+}
+</style>
+</html>
