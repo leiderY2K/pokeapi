@@ -10,14 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Poke App",
   "dependencies": {
-    "cash": "^0.8.0",
     "cash-dom": "^8.1.5",
     "ky": "^1.7.2",
-    "remove": "^0.1.5",
-    "sweetalert2": "^11.6.13",
-    "trim-newlines": "^5.0.0"
+    "sweetalert2": "^6.6.1"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
