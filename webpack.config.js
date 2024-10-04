@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: './src/main/resources/static/js/index.js', // Archivo de entrada
@@ -14,13 +13,7 @@ module.exports = {
 				use: ['style-loader', 'css-loader'],
 			},
 		],
-	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/main/resources/templates/index.html', // Archivo Thymeleaf o HTML
-			filename: 'index.html',
-		})
-	],
+	},	
 	devServer: {
 		static: './src/main/resources/static/dist', // Directorio para servir archivos
 		port: 3000, // Cambia esto si necesitas otro puerto

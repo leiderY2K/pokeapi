@@ -3,7 +3,6 @@ package pokeApp.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -27,7 +26,7 @@ public class PokemonService {
 			return new PokemonDto(pokeApiResponse);
 		} catch (HttpClientErrorException e) {
 			if (e.getStatusCode() == HttpStatus.NOT_FOUND)
-				throw new HttpClientErrorException(HttpStatus.NOT_FOUND, String.format("No se encontró un pokemon llamado '%s'", name));
+				throw new HttpClientErrorException(HttpStatus.NOT_FOUND, String.format("No se encontró un pokemon con ID o nombre '%s'", name));
 			else
 				throw new HttpClientErrorException(HttpStatus.INTERNAL_SERVER_ERROR, "Ocurrió un error desconocido al comunicarse con PokeAPI");
 		}
